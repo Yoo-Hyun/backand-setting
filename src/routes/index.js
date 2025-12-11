@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // Import route modules
-// const userRoutes = require('./userRoutes');
+const userRoutes = require('./userRoutes');
 // const productRoutes = require('./productRoutes');
 
 // API welcome route
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 });
 
 // Mount routes
-// router.use('/users', userRoutes);
+router.use('/users', userRoutes);
 // router.use('/products', productRoutes);
 
 module.exports = router;
