@@ -3,6 +3,7 @@ const router = express.Router();
 
 // Import route modules
 const userRoutes = require('./userRoutes');
+const authRoutes = require('./authRoutes');
 // const productRoutes = require('./productRoutes');
 
 // API welcome route
@@ -16,6 +17,7 @@ router.get('/', (req, res) => {
 
 // Mount routes
 router.use('/users', userRoutes);
+router.use('/auth', authRoutes);
 // router.use('/products', productRoutes);
 
 module.exports = router;
